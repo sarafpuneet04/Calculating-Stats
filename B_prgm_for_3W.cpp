@@ -93,17 +93,17 @@ int main(int argc, char *argv[])
 		fprintf(fptr_out,"\n");
 	}
 	
-	fprintf(fptr_out,"Max and Mean Retention Writes\n");
-	fprintf(fptr_out,"%d ",maxR);
-	fprintf(fptr_out,"%d \nMax and Mean WriteBacks Writes\n",totalR/16384);
+	fprintf(fptr_out,"Total, Max and Mean Retention Writes\n");
+	fprintf(fptr_out,"%d %d ",totalR,maxR);
+	fprintf(fptr_out,"%d \nTotal, Max and Mean WriteBacks Writes\n",totalR/16384);
 
-	fprintf(fptr_out,"%d ",maxWB);
-	fprintf(fptr_out,"%d \nMax and Mean Misses Writes\n",totalWB/16384);
+	fprintf(fptr_out,"%d %d ",totalWB,maxWB);
+	fprintf(fptr_out,"%d \nTotal, Max and Mean Misses Writes\n",totalWB/16384);
 
-	fprintf(fptr_out,"%d ",maxM);
-	fprintf(fptr_out,"%d \nMax and Mean Total Writes\n",totalM/16384);
+	fprintf(fptr_out,"%d %d ",totalM,maxM);
+	fprintf(fptr_out,"%d \nTotal, Max and Mean Total Writes\n",totalM/16384);
 
-	fprintf(fptr_out,"%d ",maxAll);
+	fprintf(fptr_out,"%d %d ",totalAll ,maxAll);
 	fprintf(fptr_out,"%d ",totalAll/16384);
 
 fclose(fptr_in);
